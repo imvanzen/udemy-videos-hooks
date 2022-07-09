@@ -25,16 +25,14 @@ const App = () => {
     return (
         <div className="app ui container">
             <SearchBar onTermSubmit={onTermSubmit} />
-            <div className="ui grid">
-                <div className="ui row">
-                    <div className="eleven wide column">
-                        <VideoDetail video={selectedVideo} />
-                    </div>
-                    <div className="five wide column">
-                        <VideoList
-                            onVideoSelect={setSelectedVideo}
-                            videos={videos} />
-                    </div>
+            <div className="ui stackable two column grid">
+                <div className="eleven wide column">
+                    <VideoDetail video={selectedVideo} />
+                </div>
+                <div className="five wide column">
+                    <VideoList
+                        onVideoSelect={setSelectedVideo}
+                        videos={videos} />
                 </div>
             </div>
         </div>
